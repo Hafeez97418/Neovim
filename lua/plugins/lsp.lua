@@ -16,6 +16,12 @@ return {
         ),
       },
       clangd = {},
+      jdtls = {},
+    },
+    setup = {
+      jdtls = function()
+        return true --avoiding duplicates jdtls servers
+      end,
     },
   },
 }
