@@ -1,27 +1,38 @@
 return {
-  "neovim/nvim-lspconfig",
-  opts = {
-    servers = {
-      emmet_ls = {
-        filetypes = { "html", "css", "javascriptreact", "typescriptreact", "svelte" },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        -- Add the lspconfig name of your server here
+        -- Example: pyright for Python, tsserver for JS/TS
+        -- python
+        ruff = {},
+        ruff_lsp = {},
+        pyright = {},
+        -- c/c++
+        clangd = {},
+        --css
+        emmet_ls = {
+          filetypes = { "html", "css", "javascriptreact", "typescriptreact", "svelte" },
+        },
+        tailwindcss = {
+          filetypes = { "html", "css", "javascript", "javascriptreact", "typescriptreact", "svelte", "typescript" },
+          root_dir = require("lspconfig.util").root_pattern(
+            "tailwind.config.js",
+            "tailwind.config.ts",
+            "postcss.config.js",
+            "package.json",
+            ".git"
+          ),
+        },
+        jdtls = {},
       },
-      tailwindcss = {
-        filetypes = { "html", "css", "javascript", "javascriptreact", "typescriptreact", "svelte", "typescript" },
-        root_dir = require("lspconfig.util").root_pattern(
-          "tailwind.config.js",
-          "tailwind.config.ts",
-          "postcss.config.js",
-          "package.json",
-          ".git"
-        ),
+
+      setup = {
+        jdtls = function()
+          return true --avoiding duplicates jdtls servers
+        end,
       },
-      clangd = {},
-      jdtls = {},
-    },
-    setup = {
-      jdtls = function()
-        return true --avoiding duplicates jdtls servers
-      end,
     },
   },
 }
