@@ -17,21 +17,13 @@ return {
         },
         tailwindcss = {
           filetypes = { "html", "css", "javascript", "javascriptreact", "typescriptreact", "svelte", "typescript" },
-          root_dir = require("lspconfig.util").root_pattern(
-            "tailwind.config.js",
-            "tailwind.config.ts",
-            "postcss.config.js",
-            "package.json",
-            ".git"
-          ),
+          -- root_dir = require("lspconfig.util").root_pattern(
+          --   "tailwind.config.*",
+          --   "postcss.config.*",
+          --   "package.json",
+          --   ".git"
+          -- ),
         },
-        jdtls = {},
-      },
-
-      setup = {
-        jdtls = function()
-          return true --avoiding duplicates jdtls servers
-        end,
       },
     },
   },
