@@ -4,3 +4,4 @@
 
 vim.opt.wrap = true
 vim.g.lazyvim_prettier_needs_config = true
+vim.opt.clipboard = "unnamedplus"

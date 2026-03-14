@@ -12,6 +12,7 @@ This is my personalized Neovim setup based on [LazyVim](https://github.com/LazyV
 ## Getting Started
 
 1. **Clone this repository:**
+
    ```sh
    git clone <your-repo-url> ~/.config/nvim
    ```
@@ -20,13 +21,16 @@ This is my personalized Neovim setup based on [LazyVim](https://github.com/LazyV
    - `python3-venv`
    - `ripgrep`
    - `unzip`
+   - `xclip or xsel for clipboard support (optional)`
 
    On Debian/Ubuntu:
+
    ```sh
    sudo apt install python3-venv ripgrep unzip
    ```
 
 3. **Launch Neovim:**
+
    ```sh
    nvim
    ```
@@ -40,6 +44,3 @@ Feel free to explore and modify the configuration files in the `lua/` directory 
 ---
 
 Happy Vimming!
-```
-
-
