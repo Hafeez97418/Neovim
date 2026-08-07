@@ -49,8 +49,5 @@ require("lazy").setup({
         "zipPlugin",
       },
     },
-  },
-  opts = {
-    colorscheme = "carbonfox"
-  }
-})
+}})
+

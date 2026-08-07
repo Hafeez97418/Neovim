@@ -7,7 +7,6 @@ return {
         -- Example: pyright for Python, tsserver for JS/TS
         -- python
         ruff = {},
-        ruff_lsp = {},
         pyright = {},
         -- c/c++
         clangd = {},

@@ -5,5 +5,5 @@ return {
     opts = {
       colorscheme = "carbonfox",
     },
-  }
+  },
 }

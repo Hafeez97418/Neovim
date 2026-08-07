@@ -14,6 +14,9 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#9ece6a", bold = true })
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function()
+    vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#9ece6a", bold = true })
+  end,
+})
 
-vim.lsp.enable("jdtls")
